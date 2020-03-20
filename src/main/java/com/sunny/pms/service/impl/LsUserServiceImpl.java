@@ -1,8 +1,8 @@
 package com.sunny.pms.service.impl;
 
-import com.tong.cins.dao.LsUserDao;
-import com.tong.cins.entity.LsUser;
-import com.tong.cins.service.LsUserService;
+import com.sunny.pms.dao.LsUserDao;
+import com.sunny.pms.entity.LsUser;
+import com.sunny.pms.service.LsUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
