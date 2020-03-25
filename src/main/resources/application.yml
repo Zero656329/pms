@@ -27,5 +27,10 @@ spring:
       # 数据库连接超时时间,默认30秒，即30000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+  rabbitmq:
+    port: 5672
+    host: 118.25.97.210
+    username: admin
+    password: admin
 mybatis:
   mapper-locations: classpath:mapper/*.xml

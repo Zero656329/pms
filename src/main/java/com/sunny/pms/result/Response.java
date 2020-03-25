@@ -1,22 +1,22 @@
 package com.sunny.pms.result;
 
 public class Response {
-private  String rspCode="200";
-private String rspMsg="操作成功";
+private  String code="200";
+private String msg="操作成功";
 
-    public String getRspCode() {
-        return rspCode;
+    public String getCode() {
+        return code;
     }
 
-    public void setRspCode(String rspCode) {
-        this.rspCode = rspCode;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public String getRspMsg() {
-        return rspMsg;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setRspMsg(String rspMsg) {
-        this.rspMsg = rspMsg;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 }
