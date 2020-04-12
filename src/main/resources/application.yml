@@ -27,6 +27,11 @@ spring:
       # 数据库连接超时时间,默认30秒，即30000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+  redis:
+    host: 118.25.97.210
+    port: 6379
+    timeout: 1000
+    password: 123456
   rabbitmq:
     port: 5672
     host: 118.25.97.210
