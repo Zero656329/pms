@@ -8,8 +8,8 @@ server:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://47.111.170.88:3306/pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    password: 656329
+    url: jdbc:mysql://118.25.97.210:3306/pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    password: Hwj@12345
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   hikari:
