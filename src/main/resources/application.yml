@@ -36,5 +36,16 @@ spring:
     host: 118.25.97.210
     username: admin
     password: admin
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 958098421@qq.com
+    password: efoortpisftibefa
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp-socketFactory-class: javax.net.ssl.SSLSocketFactor
+        debug: true
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
