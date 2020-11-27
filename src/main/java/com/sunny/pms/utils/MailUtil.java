@@ -19,12 +19,12 @@ public class MailUtil {
     //发送带附件的简单邮件
     public void sendAttachFileMail(String from, String to, String cc, String subject, String content, File file) throws MessagingException {
         MimeMessage message = javaMailSender.createMimeMessage();
-        MimeMessageHelper helper = new MimeMessageHelper(message, true);
+        MimeMessageHelper helper = new MimeMessageHelper(message);
         helper.setFrom(from);
         helper.setTo(to);
-        helper.setCc(cc);
+
         helper.setSubject(subject);
-        helper.setText(content);
+        helper.setText("测试");
         if (null != file) {
             helper.addAttachment(file.getName(), file);
         }
