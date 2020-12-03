@@ -17,7 +17,7 @@ public class MailUtil {
     JavaMailSender javaMailSender;
 
     //发送带附件的简单邮件
-    public void sendAttachFileMail(String from, String to, String cc, String subject, String content, File file) throws MessagingException {
+    public void sendAttachFileMail(String from, String to, String cc, String subject, String content) throws MessagingException {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message);
         helper.setFrom(from);
@@ -25,9 +25,7 @@ public class MailUtil {
 
         helper.setSubject(subject);
         helper.setText("测试");
-        if (null != file) {
-            helper.addAttachment(file.getName(), file);
-        }
+
         javaMailSender.send(message);
     }
 

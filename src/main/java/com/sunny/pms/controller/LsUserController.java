@@ -29,7 +29,7 @@ public class LsUserController {
     public ResponseData getList() throws MessagingException {
         List<Student> list=studentService.getList();
      String content=list.stream().map(Student::getName).toString();
-        mailUtil.sendAttachFileMail("958098421@qq.com","hwj656329@163.com","cc","测试",content,null);
+        mailUtil.sendAttachFileMail("958098421@qq.com","hwj656329@163.com","cc","测试",content);
 
         return new ResponseData(list);
     }
