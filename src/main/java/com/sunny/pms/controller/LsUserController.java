@@ -19,24 +19,5 @@ import java.util.List;
 @RestController
 @RequestMapping("/pms")
 public class LsUserController {
-    @Resource
-    private MailUtil mailUtil;
-    @Resource
-    private StudentService studentService;
-    @Resource
-    private RedisTemplate redisTemplate;
-    @RequestMapping(value = "/getList", method = RequestMethod.GET)
-    public ResponseData getList() throws MessagingException {
-        List<Student> list=studentService.getList();
-     String content=list.stream().map(Student::getName).toString();
-        mailUtil.sendAttachFileMail("958098421@qq.com","hwj656329@163.com","cc","测试",content);
 
-        return new ResponseData(list);
-    }
-    @RequestMapping(value = "/setList", method = RequestMethod.GET)
-    public ResponseData setList(){
-
-       Object list= redisTemplate.opsForValue().get("lsuser");
-        return new ResponseData(list);
-    }
 }
