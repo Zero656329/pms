@@ -10,7 +10,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://118.25.97.210:3306/pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    password: Hwj@12345
+    password: Hwj@656329
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   hikari:
@@ -32,25 +32,20 @@ spring:
     host: 118.25.97.210
     port: 6379
     timeout: 1000
+    password: hwj656329
   rabbitmq:
     port: 5672
     host: 118.25.97.210
     username: admin
     password: admin
     virtual-host: /
-  mail:
-    host: smtp.qq.com
-    port: 587
-    username: 958098421@qq.com
 
-    default-encoding: utf-8
-    properties:
-      mail:
-        smtp-socketFactory-class: javax.net.ssl.SSLSocketFactor
-        debug: true
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 
 logging:
-  config: classpath:log4j2.yml
+  config: classpath:logback-spring.xml
+flowable:
+  async-executor-activate: false
+  database-schema-update: true
