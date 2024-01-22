@@ -1,12 +1,12 @@
 package com.sunny.pms.config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-/*import org.springframework.amqp.core.*;
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;*/
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.amqp.SimpleRabbitListenerContainerFactoryConfigurer;
 import org.springframework.context.annotation.Bean;
@@ -17,17 +17,15 @@ import java.util.Map;
 
 @Configuration
 public class RabbitmqConfig {
-   /* private static final Logger log= LoggerFactory.getLogger(RabbitmqConfig.class);
+    private static final Logger log= LoggerFactory.getLogger(RabbitmqConfig.class);
     @Autowired
     private CachingConnectionFactory connectionFactory;
 
     @Autowired
     private SimpleRabbitListenerContainerFactoryConfigurer factoryConfigurer;
 
-    *//**
-     * 单一消费者
-     * @return
-     *//*
+
+    //单一消费者
     @Bean(name = "singleListenerContainer")
     public SimpleRabbitListenerContainerFactory listenerContainer(){
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
@@ -38,10 +36,8 @@ public class RabbitmqConfig {
         factory.setPrefetchCount(1);
         return factory;
     }
-    *//**
-     * 多个消费者
-     * @return
-     *//*
+
+    //多个消费者
     @Bean(name = "multiListenerContainer")
     public SimpleRabbitListenerContainerFactory multiListenerContainer(){
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
@@ -133,6 +129,6 @@ public class RabbitmqConfig {
     @Bean
     public Binding basicDeadBinding() {
         return BindingBuilder.bind(realConsumerQueue()).to(basicDeadExchange()).with("pms.real.key");
-    }*/
+    }
 
 }

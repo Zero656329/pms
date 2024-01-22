@@ -43,13 +43,13 @@ class PmsApplicationTests {
 
 	@Test
 	public void test2() throws Exception{
-		/*//定义实体对象1
+		//定义实体对象1
 		DeadInfo info=new DeadInfo(2,"邵柠柠傻逼250");
 		info.setAddr("hwj656329@163.com");
 		//发送实体对象1消息入死信队列
 		log.info("发生");
 		basicPublisher.sendDeadMsg(info);
-		Thread.sleep(70000);*/
+		Thread.sleep(70000);
 	}
 	@Test
 	public void test3() throws Exception{

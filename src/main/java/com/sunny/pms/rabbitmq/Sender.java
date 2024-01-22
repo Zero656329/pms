@@ -3,13 +3,13 @@ package com.sunny.pms.rabbitmq;
 import com.sunny.pms.entity.DeadInfo;
 
 import lombok.extern.slf4j.Slf4j;
-/*import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.AbstractJavaTypeMapper;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;*/
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class Sender {
 
 
-/*
+
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
@@ -25,10 +25,7 @@ public class Sender {
     private Environment env;
 
 
-    *//**
-     * 发送消息
-     * @param message
-     *//*
+ //发送消息
     public void sendMsg(String message){
 
             try {
@@ -46,15 +43,7 @@ public class Sender {
                 log.error("基本消息模型-生产者-发送消息发生异常：{} ",message,e.fillInStackTrace());
             }
         }
-
-
-
-
-
-    *//**
-     * 发送对象类型的消息入死信队列
-     * @param info
-     *//*
+    //发送对象类型的消息入死信队列
     public void sendDeadMsg(DeadInfo info){
         try {
             //设置消息的传输格式-Json格式
@@ -87,5 +76,5 @@ public class Sender {
         }catch (Exception e){
             log.error("死信队列实战-发送对象类型的消息入死信队列-发生异常：{} ",info,e.fillInStackTrace());
         }
-    }*/
+    }
 }
